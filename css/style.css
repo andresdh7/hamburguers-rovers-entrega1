@@ -17,7 +17,7 @@ img {
 }
 
 html {
-    /*para que generar ancla animadas*/
+    /* para generar un ancla animada */
     scroll-behavior: smooth;
 }
 
@@ -41,7 +41,7 @@ body {
     font-size: var(--fontSize);
 }
 
-/* inicio header */
+/* INICIO HEADER */
 
 header .nav-top {
     background-color: var(--colorSecundario);
@@ -117,13 +117,19 @@ header nav .menu li a {
     color: #aaa;
 }
 
+/* Elimina el borde inferior de Equipo */
+header nav .menu li:last-child a {
+    border-bottom: 0;
+}
+
+
 header nav .menu li a:hover, header nav .menu li .activo {
     color: var(--colorPrincipal)
 }
 
-/* final header */
+/* FINAL HEADER */
 
-/* inicio footer */
+/* INICIO FOOTER */
 
 footer {
     position: fixed;
@@ -155,9 +161,97 @@ footer a:hover {
     color: var(--colorPrincipal)
 }
 
-/* fin footer */
+/* FIN FOOTER */
 
-/* media queries 768px */
+/* INICIO HERO */
+/* Imagen de fondo 
+   Altura
+   Centrado en la vertical y horizontal
+   Que se ajuste al 100%
+   Se le pone delante otro color
+   Se mezclan ambos fondos
+   Para que el contenido se coloque responde al container
+   */
+.hero {
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    background-color: 999;
+    background-blend-mode: multiply;
+    display: flex;
+}
+
+/* Para que el contenido se coloque responde al container
+   Colocarlo en el centro
+   Ponerlo en columna
+   Tamaño del 95% para ajustar más el contenido */
+.hero .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    color: white;
+
+}
+
+/* Las mejores hamburguesas del mundo */
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: calc(var(--fontSize)*2.5);
+}
+
+/* Bienvenido a nuestra Hamburguesería */
+.hero h2 {
+    color: var(--colorPrincipal);
+    font-size: calc(var(--fontSize)*1.35);
+    margin: var(--marginGrid) 0;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Come por 15€ */
+.hero p {
+    font-size: calc(var(--fontSize)*1.15);
+}
+
+/* Botón */
+/* El border es un truco para que al hacer rollover no se note */
+.boton {
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-decoration: none;
+    padding: 1.15em;
+    margin: var(--marginGrid) 0;
+    border: 1px solid var(--colorPrincipal);
+}
+/* Rollover del botón*/
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+/* Icono del botón */
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px); 
+}
+/* Iconos de Redes Sociales */
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*FIN HERO */
+
+/* MEDIA QUERIES 768px */
 
 @media(min-width: 48em) {
 
@@ -175,7 +269,7 @@ footer a:hover {
 
 }
 
-/* media queries 1004px */
+/* MEDIA QUERIES 1004px */
 
 @media(min-width: 62.750em) {
 
