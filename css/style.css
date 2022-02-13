@@ -1,9 +1,11 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /*
     font-family: 'Handlee', cursive;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Great Vibes', cursive;
 */
 
 * {
@@ -23,7 +25,8 @@ html {
 
 :root {
     --fuentePrincipal: 'Montserrat', sans-serif;
-    --fuenteSecundaria: 'Handlee', cursive;
+    --fuenteSecundaria: 'Great Vibes', cursive;
+    --fuenteTitulo: 'Handlee', cursive;
     --marginGrid: 1em;
     --colorPrincipal: #fa573a;
     --colorSecundario: #21242e;
@@ -42,7 +45,6 @@ body {
 }
 
 /* INICIO HEADER */
-
 header .nav-top {
     background-color: var(--colorSecundario);
     padding: 20px 0px;
@@ -177,7 +179,7 @@ footer a:hover {
     height: 60vh;
     background-position: center center;
     background-size: cover;
-    background-color: 999;
+    background-color: #999;
     background-blend-mode: multiply;
     display: flex;
 }
@@ -197,8 +199,8 @@ footer a:hover {
 
 /* Las mejores hamburguesas del mundo */
 .hero h1 {
-    font-family: var(--fuenteSecundaria);
-    font-size: calc(var(--fontSize)*2.5);
+    font-family: var(--fuenteTitulo);
+    font-size: calc(var(--fontSize)*2.3);
 }
 
 /* Bienvenido a nuestra Hamburguesería */
@@ -260,8 +262,8 @@ main section h2 {
     font-family: var(--fuenteSecundaria);
     font-size: 2em;
     text-align: center;
-
 }
+
 /* Se colorea de rojo Services */
 main section h2 span {
     color: var(--colorPrincipal);
@@ -333,6 +335,10 @@ main #ourservices .flex article div i {
 
 
 /* INICIO ABOUTUS */
+main #aboutus .container h2 {
+    font-family: var(--fuenteSecundaria);
+    }
+
 main section h3{
     font-weight: 700;
     font-size: 110%;
@@ -371,8 +377,164 @@ main #aboutus figure:hover :is(.marco, img) {
 main #aboutus {
     margin-bottom: 40px;
 }
-
 /* FIN ABOUTUS */
+
+/* PRINCIPIO OURBLOGS */
+
+main #ourblogs .container h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: calc(var(--fontSize)*2.3);
+    text-align: center;
+}
+
+main #ourblogs .container h1 span {
+    color: var(--colorPrincipal);
+}
+
+main #ourblogs .container .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    margin-bottom: 40px;
+} 
+
+main #ourblogs .container .flex article {
+    width: calc(50% - 20px);
+    margin: 10px;
+} 
+
+main #ourblogs .container .flex article>figure {
+    position: relative;
+    margin-bottom: calc(var(--marginGrid)*1.25);
+} 
+
+main #ourblogs .container .flex article>div h3 {
+    font-weight: 400;
+    font-size: calc(var(--fontSize)*1.75);
+} 
+
+main #ourblogs .container .flex article>div h4 {
+    font-weight: 700;
+} 
+
+main #ourblogs .container .flex article>figure div {
+    background-color: rgba(250, 87, 58, 0.80);
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+main #ourblogs .container .flex article>figure div p {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+    padding: 5px 0px;
+}
+
+main #ourblogs .flex article>div{
+    padding: 0 calc(var(--marginGrid) * 1.5);
+}
+
+main #ourblogs .flex article>div p {
+    margin-bottom: var(--marginGrid);
+}
+
+/* FIN OURBLOGS */
+
+/* INICIO TODAYS MENU */
+.fondo{
+    background-color: var(--colorSecundario);
+}
+
+main #todaysmenu {
+    color: white;
+}
+
+main #todaysmenu .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main #todaysmenu h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: calc(var(--fontSize)*2.3);
+    text-align: center;
+}
+
+main #todaysmenu h1 span {
+    color: var(--colorPrincipal);
+}
+
+main #todaysmenu aside nav ul li .activo {
+    background-color: var(--colorPrincipal);
+    border-radius: 5px
+}
+
+main #todaysmenu aside nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: var(--marginGrid);
+}
+
+main #todaysmenu aside nav {
+    margin-bottom: 3em;
+}
+
+main #todaysmenu aside>div div {
+    width: 3.75em;
+    border: 1px solid var(--colorPrincipal);
+    margin: var(--marginGrid) 0;
+}
+
+main #todaysmenu h2 {
+    font-family: var(--fuentePrincipal);
+    font-size: calc(var(--fontSize)*1.15);
+    font-weight: 700;
+    text-align: left;
+    color: white;
+}
+
+main #todaysmenu p {
+    color: white;
+    line-height: 1.10em;
+}
+
+main #todaysmenu .description div {
+    display: flex;
+}
+
+main #todaysmenu .description div h3 {
+    width: 95%;
+}
+
+main #todaysmenu .description div span {
+    color: var(--colorPrincipal);
+    width: 5%;
+    font-weight: 700;
+}
+
+main #todaysmenu .flex article {
+    display: flex;
+    flex-direction: column;
+}
+
+main #todaysmenu .description {
+    margin-bottom: 1.5em;
+}
+
+main #todaysmenu .flex article figure {
+    margin: 1.5em 0;
+}
+
+main #todaysmenu .description p {
+    margin: var(--marginGrid) 0;
+}
+/* FIN TODAYS MENU */
 
 
 /* MEDIA QUERIES 600px */
@@ -380,7 +542,7 @@ main #aboutus {
 
     /* Le resto los márgenes de izquierda y derecha al width */
     main #ourservices .flex article {
-        width: calc(50% - var(--marginGrid)*2);
+        width: calc(50% - (var(--marginGrid)*2));
         padding: 0em var(--marginGrid);
         border-bottom: 0px;
         margin: var(--marginGrid);
@@ -398,8 +560,6 @@ main #aboutus {
     main #aboutus .columna {
         padding: 1em;
     }
-
-
 
 }
 
@@ -422,7 +582,6 @@ main #aboutus {
 }
 
 /* MEDIA QUERIES 1004px */
-
 @media(min-width: 62.750em) {
 
     header nav .hamburguesa {
@@ -456,5 +615,55 @@ main #aboutus {
         width: calc(33.333% - var(--marginGrid)*2);
     }
 
+    main #ourblogs .container .flex article {
+        width: calc(33.333% - 30px);
+        margin: 15px;
+    } 
+
+    main #ourblogs .container .flex article>div h3 {
+        font-size: calc(var(--fontSize)*1.3);
+    } 
+   
+
+    main #todaysmenu .flex {
+        flex-direction: row;
+    }
+
+    main #todaysmenu .flex aside {
+        width: 33.333%;
+        padding-right: 75px;
+    }
+
+    main #todaysmenu .flex>section {
+        width: 66.666%;
+        display: flex;
+        flex-direction: column;
+        padding: 0em 1em;
+    }
+
+    main #todaysmenu .flex article {
+        flex-direction: row;
+    }
+
+    main #todaysmenu .description {
+        width: 75%;
+    }
+
+    main #todaysmenu .flex article figure {
+        width: 25%;
+        margin: 0 var(--fontSize) var(--fontSize) 0;
+    }
+
+    main #todaysmenu .description div h3 {
+        width: 85%
+    }
+
+    main #todaysmenu .description div p {
+        width: 15%
+    }
+
+    main #todaysmenu .description div span {
+        align-items: left;
+    }
 
 }
